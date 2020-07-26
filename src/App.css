@@ -1,18 +1,60 @@
 .App {
   text-align: center;
+  width: 100%;
+}
+.App {
+}
+div {
+  max-width: 100%;
+}
+.body {
+  display: flex;
+  justify-content: center;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  background-color: inherit;
+}
+a:visited {
+  text-decoration: none;
+  color: inherit;
+  background-color: inherit;
+}
+#cdIcon {
+  width: 100px;
+  z-index: 3000;
+  transition: all 1s ease;
+  margin-right: 0px;
+  height: 100%;
+}
+.clickedIcon {
+  flex: 1 !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#TitleName {
+  flex: 0;
+  overflow-x: auto;
+  font-size: medium;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@keyframes slidein {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(100%);
   }
 }
-
+@font-face {
+  font-family: "digital-clock-font";
+  src: url("./fonts/digital-7.ttf");
+}
+@font-face {
+  font-family: "graffiti";
+  src: url("./fonts/SpriteGraffiti-Regular.ttf");
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -23,11 +65,68 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.tracklist-items {
+  justify-content: center;
+  align-content: center;
+}
+.tracklist-items:nth-child(even) {
+  background-color: #0d47a1;
+  transition: background-color 0.4s ease;
+  border-bottom: #121858 1px solid;
+  color: white;
+}
+.tracklist-items:nth-child(odd) {
+  background-color: #121858;
+  transition: background-color 0.4s ease;
+  color: white;
+  border-bottom: #121858 1px solid;
+}
+.tracklist-items:nth-child(even):hover {
+  background-color: #1976d2;
+}
 
+.tracklist-items:nth-child(odd):hover {
+  background-color: #1976d2;
+}
+
+#tracklist {
+  border-radius: 20%;
+}
+.toolBar {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: center;
+  min-width: 100%;
+  box-sizing: content-box;
+  padding: 0;
+  height: 50px;
+  background-color: #0d47a1;
+  border-bottom: #121858 8px solid;
+}
+.MuiToolbar-gutters {
+  padding: 0 !important;
+}
+.MuiToolbar-root {
+  padding: 0 !important;
+}
+.MuiToolbar-regular {
+  padding: 0 !important;
+}
 .App-link {
   color: #61dafb;
 }
-
+@media (max-width: 250px) {
+  .toolbar {
+    min-width: 210px;
+  }
+}
+#myAudio {
+  width: 20px;
+}
+::-webkit-scrollbar {
+  width: 0px;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +134,89 @@
   to {
     transform: rotate(360deg);
   }
+}
+.makeStyles-heroContent-2 {
+  background-color: transparent !important;
+}
+.clockdiv {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100%;
+  background-color: transparent;
+}
+#myVideo {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#videoContainer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -100;
+}
+#title {
+  font-family: graffiti;
+  color: #0d47a1;
+  font-size: 5rem;
+  margin: 0px;
+  max-width: 100%;
+  text-shadow: 2px 2px #121858;
+}
+#subtitle {
+  margin-top: 0;
+  font-family: graffiti;
+  color: red;
+  font-size: 7rem;
+  text-shadow: 2px 2px #121858;
+}
+.days,
+.hours,
+.minutes,
+.seconds {
+  margin-top: 10%;
+  text-align: center;
+  display: inline-block;
+  min-width: 105px;
+  max-width: 110px;
+  padding: 2rem;
+  background-color: #0d47a1;
+  border: #121858 solid 3px;
+  color: white;
+  font-size: 2rem;
+  font-family: digital-clock-font;
+  box-shadow: 3px 5px 5px black;
+  border-radius: 15%;
+}
+.MuiToolbar-root {
+  background-color: #0d47a1;
+}
+
+#getNotified {
+  background-color: #0d47a1;
+}
+#App {
+  min-width: 500px;
+  min-height: 500px;
+}
+
+#login2 {
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#inputPassword {
+  margin: auto;
+  display: block;
 }
