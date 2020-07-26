@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c66d3ab4a36490aa2c30e465deb80a6a",
+    "revision": "6ab88ee5230bb8d4328bb288dc3c015a",
     "url": "/mindsetprodigy/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/mindsetprodigy/static/css/2.a24412fc.chunk.css"
   },
   {
-    "revision": "256b129a11919f94fbb6",
+    "revision": "674c16bacdeb6d92f845",
     "url": "/mindsetprodigy/static/css/main.12392aec.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/mindsetprodigy/static/js/2.d8954999.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "256b129a11919f94fbb6",
-    "url": "/mindsetprodigy/static/js/main.a65c75a1.chunk.js"
+    "revision": "674c16bacdeb6d92f845",
+    "url": "/mindsetprodigy/static/js/main.3bbd95fe.chunk.js"
   },
   {
     "revision": "ce46314d45ea0962ccae",
