@@ -11,10 +11,10 @@ function App() {
       <div className="App">
         <Router>
           <Switch>
-            <Route path="/loggedin">
+            <Route path={process.env.PUBLIC_URL + "/loggedin"}>
               <Album />{" "}
             </Route>
-            <Route path="/">
+            <Route path={process.env.PUBLIC_URL + "/"}>
               <Login />
             </Route>
           </Switch>

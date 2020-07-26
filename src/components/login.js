@@ -18,7 +18,7 @@ const Login = () => {
       <div className="login2"></div>
     </>
   ) : (
-    <Redirect exact from="/" to="loggedin" />
+    <Redirect to={process.env.PUBLIC_URL + "/loggedIn"} />
   );
 };
 export default Login;
