@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4fd07f5aebf900b2fdc5d14d1d1e1d05",
+    "revision": "0b4eb08a2bcdd9924031ea117757b6f9",
     "url": "/mindsetprodigy/index.html"
   },
   {
-    "revision": "dd06e8d1299fba4c9ffc",
+    "revision": "63f4bfffdfa63281a726",
     "url": "/mindsetprodigy/static/css/2.a24412fc.chunk.css"
   },
   {
-    "revision": "b7a4171a18985986868e",
-    "url": "/mindsetprodigy/static/css/main.6b185efb.chunk.css"
+    "revision": "0257fc7ff475952da7cb",
+    "url": "/mindsetprodigy/static/css/main.8e76d967.chunk.css"
   },
   {
-    "revision": "dd06e8d1299fba4c9ffc",
-    "url": "/mindsetprodigy/static/js/2.2399ad93.chunk.js"
+    "revision": "63f4bfffdfa63281a726",
+    "url": "/mindsetprodigy/static/js/2.92b44ba2.chunk.js"
   },
   {
     "revision": "0749163b59fbee32225059cb60c18af6",
-    "url": "/mindsetprodigy/static/js/2.2399ad93.chunk.js.LICENSE.txt"
+    "url": "/mindsetprodigy/static/js/2.92b44ba2.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b7a4171a18985986868e",
-    "url": "/mindsetprodigy/static/js/main.9ce57be3.chunk.js"
+    "revision": "0257fc7ff475952da7cb",
+    "url": "/mindsetprodigy/static/js/main.ae6e3cc7.chunk.js"
   },
   {
     "revision": "ce46314d45ea0962ccae",
@@ -52,8 +52,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/mindsetprodigy/static/media/Super Webcomic Bros..781b10f2.ttf"
   },
   {
-    "revision": "741e3384e176e69fdf64903fc3e11b2f",
-    "url": "/mindsetprodigy/static/media/background.741e3384.mp4"
+    "revision": "6077f78c07cd6088f88cfb19d5dda427",
+    "url": "/mindsetprodigy/static/media/background.6077f78c.mp4"
   },
   {
     "revision": "39e195ed165ada7d15820d41ae4b8347",
