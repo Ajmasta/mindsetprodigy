@@ -3,7 +3,11 @@
   min-width: 100%;
   min-height: 100%;
 }
-
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 div {
   max-width: 100%;
 }

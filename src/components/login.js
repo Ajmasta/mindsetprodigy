@@ -23,6 +23,7 @@ const Login = () => {
     audio.play();
     audio.onended = () => setEnded(true);
   }
+  console.log(progress);
 
   return (
     <>
@@ -65,7 +66,7 @@ const Login = () => {
           ) : (
             ""
           )}{" "}
-          {ended ? <Redirect to="/loggedin" /> : ""}
+          {ended || progress >= 96 ? <Redirect to="/loggedin" /> : ""}
         </div>
       </div>
     </>
