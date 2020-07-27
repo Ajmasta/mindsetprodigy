@@ -1,28 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import AppBar from "@material-ui/core/AppBar";
-import Button from "@material-ui/core/Button";
-import AlbumSharpIcon from "@material-ui/icons/AlbumSharp";
 /*import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";*/
 import CssBaseline from "@material-ui/core/CssBaseline";
-import Grid from "@material-ui/core/Grid";
-import Toolbar from "@material-ui/core/Toolbar";
+
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import Link from "@material-ui/core/Link";
 import AlbumCountdown from "./countdown";
-import AudioPlayer from "react-h5-audio-player";
+
 import music from "../music/Intro.mp3";
 import "react-h5-audio-player/lib/styles.css";
-import List from "@material-ui/core/List";
+
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import { FixedSizeList } from "react-window";
 import background from "../background.mp4";
+import PlayArrowIcon from "@material-ui/icons/PlayArrow";
+import { IconButton } from "@material-ui/core";
+import PauseIcon from "@material-ui/icons/Pause";
 
 function Copyright() {
   return (
@@ -91,6 +91,7 @@ const useStyles = makeStyles((theme) => ({
 const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 export default function Album() {
+  const [playing, setPlaying] = useState(false);
   const classes = useStyles();
 
   return (
@@ -98,25 +99,51 @@ export default function Album() {
       <CssBaseline />
       <AppBar position="relative">
         <div className="toolBar">
-          <AlbumSharpIcon
-            onClick={(e) => {
-              document.querySelector("#cdIcon").classList.add("clickedIcon");
-              document.querySelector("#TitleName").innerHTML =
-                "Intro- 3A Productions";
-              document.querySelector("#TitleName").classList.add("clickedIcon");
-            }}
-            id="cdIcon"
-            className={classes.icon}
-          />
-          <p id="TitleName" variant="h6" color="inherit" noWrap></p>
           <audio
             onContextMenu={(e) => e.preventDefault()}
             src={music}
-            autoPlay
             id="myAudio"
           >
             <source src={music}></source>
           </audio>
+          {playing ? (
+            <IconButton
+              onClick={() => {
+                document.querySelector("#myAudio").pause();
+                setPlaying(false);
+              }}
+            >
+              <PauseIcon id="pauseIcon" />{" "}
+            </IconButton>
+          ) : (
+            <IconButton
+              type="Play"
+              size="small"
+              onClick={() => {
+                document.querySelector("#myAudio").play();
+              }}
+            >
+              {" "}
+              <PlayArrowIcon
+                size="small"
+                onClick={(e) => {
+                  document
+                    .querySelector("#cdIcon")
+                    .classList.add("clickedIcon");
+                  document.querySelector("#TitleName").innerHTML =
+                    "Intro- 3A Productions";
+                  document
+                    .querySelector("#TitleName")
+                    .classList.add("clickedIcon");
+                  setPlaying(true);
+                }}
+                id="cdIcon"
+                className={classes.icon}
+              />{" "}
+            </IconButton>
+          )}
+
+          <p id="TitleName" variant="h6" color="inherit" noWrap></p>
         </div>
       </AppBar>
       <main>
