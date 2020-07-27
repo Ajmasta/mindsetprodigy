@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0b4eb08a2bcdd9924031ea117757b6f9",
+    "revision": "620fa9959af234ed0d9705d2ef03867d",
     "url": "/mindsetprodigy/index.html"
   },
   {
-    "revision": "63f4bfffdfa63281a726",
+    "revision": "251cb70061a10b1e52e5",
     "url": "/mindsetprodigy/static/css/2.a24412fc.chunk.css"
   },
   {
-    "revision": "0257fc7ff475952da7cb",
-    "url": "/mindsetprodigy/static/css/main.8e76d967.chunk.css"
+    "revision": "bfd90058cec34963546d",
+    "url": "/mindsetprodigy/static/css/main.545e3e1a.chunk.css"
   },
   {
-    "revision": "63f4bfffdfa63281a726",
-    "url": "/mindsetprodigy/static/js/2.92b44ba2.chunk.js"
+    "revision": "251cb70061a10b1e52e5",
+    "url": "/mindsetprodigy/static/js/2.7257f7a7.chunk.js"
   },
   {
     "revision": "0749163b59fbee32225059cb60c18af6",
-    "url": "/mindsetprodigy/static/js/2.92b44ba2.chunk.js.LICENSE.txt"
+    "url": "/mindsetprodigy/static/js/2.7257f7a7.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "0257fc7ff475952da7cb",
-    "url": "/mindsetprodigy/static/js/main.ae6e3cc7.chunk.js"
+    "revision": "bfd90058cec34963546d",
+    "url": "/mindsetprodigy/static/js/main.de9da7a0.chunk.js"
   },
   {
     "revision": "ce46314d45ea0962ccae",
@@ -38,6 +38,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "0d9296ad35ffa8cf35f89a79f311a3e0",
     "url": "/mindsetprodigy/static/media/NoneShallPass-B598.0d9296ad.ttf"
+  },
+  {
+    "revision": "22c246f5ab7a44ddf08e3b7ab1dfcbf8",
+    "url": "/mindsetprodigy/static/media/Saiyan-Sans Left Oblique.22c246f5.ttf"
+  },
+  {
+    "revision": "95478e56f35f8b40bdc843c1270702ca",
+    "url": "/mindsetprodigy/static/media/Saiyan-Sans Right Oblique.95478e56.ttf"
   },
   {
     "revision": "c1f81144897fc5acffc67de8febd9690",
