@@ -15,7 +15,7 @@ import Container from "@material-ui/core/Container";
 import Link from "@material-ui/core/Link";
 import AlbumCountdown from "./countdown";
 import AudioPlayer from "react-h5-audio-player";
-import music from "../music/jupiter2.mp3";
+import music from "../music/Intro.mp3";
 import "react-h5-audio-player/lib/styles.css";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
@@ -55,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
     marginRight: theme.spacing(2),
   },
   heroContent: {
-    backgroundColor: theme.palette.background.default,
+    backgroundColor: "transparent",
     padding: theme.spacing(8, 0, 6),
   },
   heroButtons: {
@@ -77,14 +77,14 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   footer: {
-    backgroundColor: theme.palette.background.paper,
+    backgroundColor: "transparent",
     padding: theme.spacing(6),
   },
   root: {
     width: "100%",
     margin: "auto",
     maxWidth: 300,
-    backgroundColor: theme.palette.background.paper,
+    backgroundColor: "transparent",
   },
 }));
 
@@ -100,11 +100,9 @@ export default function Album() {
         <div className="toolBar">
           <AlbumSharpIcon
             onClick={(e) => {
-              document.querySelector("#myAudio").play();
-              console.log(e.target);
               document.querySelector("#cdIcon").classList.add("clickedIcon");
               document.querySelector("#TitleName").innerHTML =
-                "Jupiter 2 - 3A Productions";
+                "Intro- 3A Productions";
               document.querySelector("#TitleName").classList.add("clickedIcon");
             }}
             id="cdIcon"
@@ -114,6 +112,7 @@ export default function Album() {
           <audio
             onContextMenu={(e) => e.preventDefault()}
             src={music}
+            autoPlay
             id="myAudio"
           >
             <source src={music}></source>
@@ -123,7 +122,7 @@ export default function Album() {
       <main>
         <AlbumCountdown />
         {/* Hero unit */}
-        <div className={classes.heroContent}>
+        <div>
           <Container maxWidth="sm">
             <h1
               className="titleSection"

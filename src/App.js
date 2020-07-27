@@ -9,12 +9,12 @@ function App() {
   return (
     <>
       <div className="App">
-        <Router>
+        <Router basename={process.env.PUBLIC_URL}>
           <Switch>
-            <Route path={process.env.PUBLIC_URL + "/loggedin"}>
+            <Route path={"/loggedIn"}>
               <Album />{" "}
             </Route>
-            <Route path={process.env.PUBLIC_URL + "/"}>
+            <Route path={"/"}>
               <Login />
             </Route>
           </Switch>
