@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "/mindsetprodigy/static/css/main.f90f34b3.chunk.css",
-    "main.js": "/mindsetprodigy/static/js/main.f9abbd48.chunk.js",
+    "main.css": "/mindsetprodigy/static/css/main.15aacc63.chunk.css",
+    "main.js": "/mindsetprodigy/static/js/main.e95307d9.chunk.js",
     "runtime-main.js": "/mindsetprodigy/static/js/runtime-main.b9dc75b0.js",
     "static/css/2.a24412fc.chunk.css": "/mindsetprodigy/static/css/2.a24412fc.chunk.css",
     "static/js/2.9415b255.chunk.js": "/mindsetprodigy/static/js/2.9415b255.chunk.js",
     "index.html": "/mindsetprodigy/index.html",
-    "precache-manifest.d5aac05e0b6d5899551276ca43eee245.js": "/mindsetprodigy/precache-manifest.d5aac05e0b6d5899551276ca43eee245.js",
+    "precache-manifest.d649e2f6b325e57931b9e64fc5ccac43.js": "/mindsetprodigy/precache-manifest.d649e2f6b325e57931b9e64fc5ccac43.js",
     "service-worker.js": "/mindsetprodigy/service-worker.js",
     "static/js/2.9415b255.chunk.js.LICENSE.txt": "/mindsetprodigy/static/js/2.9415b255.chunk.js.LICENSE.txt",
     "static/media/Intro.mp3": "/mindsetprodigy/static/media/Intro.c4b48484.mp3",
@@ -18,7 +18,7 @@
     "static/js/runtime-main.b9dc75b0.js",
     "static/css/2.a24412fc.chunk.css",
     "static/js/2.9415b255.chunk.js",
-    "static/css/main.f90f34b3.chunk.css",
-    "static/js/main.f9abbd48.chunk.js"
+    "static/css/main.15aacc63.chunk.css",
+    "static/js/main.e95307d9.chunk.js"
   ]
 }
