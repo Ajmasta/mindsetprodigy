@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8b081ef96022b141879f7897aec892e8",
+    "revision": "ac56963e40e3d8b7205b6758d187c479",
     "url": "/mindsetprodigy/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/mindsetprodigy/static/css/2.a24412fc.chunk.css"
   },
   {
-    "revision": "606221dd86a3209babf7",
-    "url": "/mindsetprodigy/static/css/main.ab952b9a.chunk.css"
+    "revision": "24d161bf8095378a0fc9",
+    "url": "/mindsetprodigy/static/css/main.f90f34b3.chunk.css"
   },
   {
     "revision": "040016692a8c0c79651d",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/mindsetprodigy/static/js/2.9415b255.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "606221dd86a3209babf7",
-    "url": "/mindsetprodigy/static/js/main.e46e4731.chunk.js"
+    "revision": "24d161bf8095378a0fc9",
+    "url": "/mindsetprodigy/static/js/main.f9abbd48.chunk.js"
   },
   {
     "revision": "ce46314d45ea0962ccae",
@@ -40,12 +40,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/mindsetprodigy/static/media/NoneShallPass-B598.0d9296ad.ttf"
   },
   {
-    "revision": "22c246f5ab7a44ddf08e3b7ab1dfcbf8",
-    "url": "/mindsetprodigy/static/media/Saiyan-Sans Left Oblique.22c246f5.ttf"
-  },
-  {
-    "revision": "95478e56f35f8b40bdc843c1270702ca",
-    "url": "/mindsetprodigy/static/media/Saiyan-Sans Right Oblique.95478e56.ttf"
+    "revision": "410504d49238e955ba7dc23a7f963021",
+    "url": "/mindsetprodigy/static/media/ProximaNova-Regular.410504d4.otf"
   },
   {
     "revision": "c1f81144897fc5acffc67de8febd9690",
