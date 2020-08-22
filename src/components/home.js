@@ -233,7 +233,7 @@ export default function Album() {
                     marginBottom: "135px",
                     marginTop: "35px",
                     border: "3px #121858  solid",
-                    borderRadius: "8%",
+                    borderRadius: "2%",
                     boxShadow: " 3px 3px 5px black",
                   }}
                 >

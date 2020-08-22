@@ -126,7 +126,7 @@ a:visited {
   padding-top:10px;
 }
 .tracklist-items:nth-child(even) {
-  background-color: rgb(48, 47, 47);
+  background-color: #575663;
   transition: background-color 0.4s ease;
   border-bottom: #121858 1px solid;
   color: white;
