@@ -538,7 +538,7 @@ a:visited {
 @media (max-width: 1200px) {
   .albumCard {
     min-width: 150px;
-    height: 150px;
+    height: 250px;
   }
 }
 .albumCard:hover {
