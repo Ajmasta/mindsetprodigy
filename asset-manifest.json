@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "/mindsetprodigy/static/css/main.243b83a6.chunk.css",
+    "main.css": "/mindsetprodigy/static/css/main.d68d89eb.chunk.css",
     "main.js": "/mindsetprodigy/static/js/main.c084da15.chunk.js",
     "runtime-main.js": "/mindsetprodigy/static/js/runtime-main.b9dc75b0.js",
     "static/css/2.a24412fc.chunk.css": "/mindsetprodigy/static/css/2.a24412fc.chunk.css",
     "static/js/2.c6206353.chunk.js": "/mindsetprodigy/static/js/2.c6206353.chunk.js",
     "index.html": "/mindsetprodigy/index.html",
-    "precache-manifest.f16525f4f128cf13293347ac6350ce3b.js": "/mindsetprodigy/precache-manifest.f16525f4f128cf13293347ac6350ce3b.js",
+    "precache-manifest.576f02f3c4e6ccd028f0e09b616f2432.js": "/mindsetprodigy/precache-manifest.576f02f3c4e6ccd028f0e09b616f2432.js",
     "service-worker.js": "/mindsetprodigy/service-worker.js",
     "static/js/2.c6206353.chunk.js.LICENSE.txt": "/mindsetprodigy/static/js/2.c6206353.chunk.js.LICENSE.txt",
     "static/media/1.jpg": "/mindsetprodigy/static/media/1.04809c38.jpg",
@@ -31,7 +31,7 @@
     "static/js/runtime-main.b9dc75b0.js",
     "static/css/2.a24412fc.chunk.css",
     "static/js/2.c6206353.chunk.js",
-    "static/css/main.243b83a6.chunk.css",
+    "static/css/main.d68d89eb.chunk.css",
     "static/js/main.c084da15.chunk.js"
   ]
 }
