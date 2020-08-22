@@ -70,7 +70,7 @@ function renderRow({ index, style }) {
      if (document.getElementById(`playButtonText${index}`)) document.getElementById(`playButtonText${index}`).classList.add("hidden");
      if (document.getElementById(`playIconTracks${index}`)) document.getElementById(`playIconTracks${index}`).classList.remove("hidden")}} 
              >
-              <p className="hidden" id={`playButtonText${index}`}>29/08</p>
+              <p className="hidden playButtonText2" id={`playButtonText${index}`}>29/08</p>
               <PlayArrowIcon className="playArrowTracklist" id={`playIconTracks${index}`} />
 
              </div>

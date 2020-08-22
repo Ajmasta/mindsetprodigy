@@ -120,6 +120,10 @@ a:visited {
   margin: auto;
   height:24px;
 }
+.playButtonText2{
+  margin:auto
+}
+
 .MuiTypography-displayBlock{
   min-width:256px;
   width:100%;
