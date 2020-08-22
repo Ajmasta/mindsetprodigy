@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import AppBar from "@material-ui/core/AppBar";
 /*import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
@@ -23,6 +23,10 @@ import background from "../background.mp4";
 import PlayArrowIcon from "@material-ui/icons/PlayArrow";
 import { IconButton } from "@material-ui/core";
 import PauseIcon from "@material-ui/icons/Pause";
+import AlbumGrid from "./albumGrid";
+import ListIcon from "@material-ui/icons/List";
+import AlbumIcon from "@material-ui/icons/Album";
+import ButtonGroup from "@material-ui/core/ButtonGroup";
 
 function Copyright() {
   return (
@@ -38,15 +42,25 @@ function Copyright() {
 }
 function renderRow({ index, style }) {
   const array = [
-    "Jupiter2 - 3A",
-    "Vrai Rebeu de Cite-4A",
-    "Almost Black - Stefan",
-    "Double Burden - PH",
-    "e",
+    "Le Retour",
+    "Chemin",
+    "The Prodigy (skit)",
+    "Hyped",
+    "Du Sale a L’Ancienne (feat Breeze)",
+    "Vice City",
+    "Hegobreak (part 1)",
+    "LxF (part 2)",
+    "Je Suis Jordy (skit)",
+    "Bon Bagaye (feat Black Lion)",
+    "Envol",
+    "Souriciere",
+    "Captain Ginyu's Squad",
+    "Couronne de Roi (feat Jello)"
   ];
   return (
     <ListItem class="tracklist-items" button style={style} key={index}>
-      <ListItemText primary={`${array[index]}`} />
+      <ListItemText class="tracklistText" primary={`${array[index]}`} />{" "}
+      <PlayArrowIcon id="playArrowTracklist" />
     </ListItem>
   );
 }
@@ -91,9 +105,16 @@ const useStyles = makeStyles((theme) => ({
 const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 export default function Album() {
-  const [playing, setPlaying] = useState(false);
+  const [playing, setPlaying] = useState(true);
+  const [viewSelected, setViewSelected] = useState("album");
   const classes = useStyles();
-
+  let audioFile = "";
+  if (document.querySelector("#myAudio")){
+    audioFile = document.querySelector("#myAudio");
+    
+  }
+  if (!audioFile.paused && !playing) setPlaying(true)
+  
   return (
     <React.Fragment>
       <CssBaseline />
@@ -103,47 +124,47 @@ export default function Album() {
             onContextMenu={(e) => e.preventDefault()}
             src={music}
             id="myAudio"
+            autoPlay="true"
           >
             <source src={music}></source>
           </audio>
-          {playing ? (
+          {playing ? (<>
             <IconButton
+              size="small"
+              type="Pause"
               onClick={() => {
                 document.querySelector("#myAudio").pause();
                 setPlaying(false);
               }}
             >
-              <PauseIcon id="pauseIcon" />{" "}
+              <PauseIcon className={classes.icon} size="small" id="pauseIcon" />{" "}
             </IconButton>
-          ) : (
+           <p id="TitleName" variant="h6" color="inherit" noWrap> Intro- 3A Productions </p> </>) : (
             <IconButton
               type="Play"
               size="small"
               onClick={() => {
                 document.querySelector("#myAudio").play();
+                document
+                    .querySelector("#cdIcon")
+                    .classList.add("clickedIcon");
+                 
+              
+
+                  setPlaying(true);
               }}
             >
               {" "}
               <PlayArrowIcon
                 size="small"
-                onClick={(e) => {
-                  document
-                    .querySelector("#cdIcon")
-                    .classList.add("clickedIcon");
-                  document.querySelector("#TitleName").innerHTML =
-                    "Intro- 3A Productions";
-                  document
-                    .querySelector("#TitleName")
-                    .classList.add("clickedIcon");
-                  setPlaying(true);
-                }}
+            
                 id="cdIcon"
                 className={classes.icon}
               />{" "}
             </IconButton>
           )}
 
-          <p id="TitleName" variant="h6" color="inherit" noWrap></p>
+         
         </div>
       </AppBar>
       <main>
@@ -170,31 +191,67 @@ export default function Album() {
               color="textSecondary"
               paragraph
             ></Typography>
-
-            <div className={classes.root}>
-              <FixedSizeList
-                id="tracklist"
-                height={200}
-                width={300}
-                border-radius={"10%"}
-                itemSize={46}
-                itemCount={20}
-                style={{
-                  backgroundColor: "transparent",
-                  margin: "0",
-                  border: "3px #121858  solid",
-                  borderRadius: "8%",
-                  boxShadow: " 3px 3px 5px black",
-                }}
+            <ButtonGroup>
+              <IconButton
+                className={
+                  viewSelected === "album"
+                    ? "selectedIcon trackIconList"
+                    : "trackIconList"
+                }
+                onClick={() => setViewSelected("album")}
               >
-                {renderRow}
-              </FixedSizeList>
-            </div>
+                <AlbumIcon />{" "}
+              </IconButton>
+              <IconButton
+                className={
+                  viewSelected === "list"
+                    ? "selectedIcon trackIconList"
+                    : "trackIconList"
+                }
+                onClick={() => setViewSelected("list")}
+              >
+                <ListIcon />{" "}
+              </IconButton>
+            </ButtonGroup>
+
+            {viewSelected === "album" ? (
+              <AlbumGrid />
+            ) : (
+              <div className={classes.root}>
+                <FixedSizeList
+                  id="tracklist"
+                  height={200}
+                  width={300}
+                  border-radius={"10%"}
+                  itemSize={46}
+                  itemCount={14}
+                  style={{
+                    backgroundColor: "transparent",
+                    margin: "0",
+                    marginBottom: "135px",
+                    marginTop: "35px",
+                    border: "3px #121858  solid",
+                    borderRadius: "8%",
+                    boxShadow: " 3px 3px 5px black",
+                  }}
+                >
+                  {renderRow}
+                </FixedSizeList>
+              </div>
+            )}
           </Container>
         </div>
       </main>
       <div id="videoContainer">
-        <video id="myVideo" autoPlay muted loop id="myVideo">
+        <video
+          id="myVideo"
+          autoPlay="true"
+          poster="../pictures/poster.jpg"
+          muted="true"
+          playsInline="true"
+          loop
+          id="myVideo"
+        >
           <source src={background} type="video/mp4"></source>
         </video>
       </div>

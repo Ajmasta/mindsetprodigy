@@ -34,12 +34,19 @@ a:visited {
   margin-right: 0px;
   height: 100%;
 }
+#pauseIcon {
+  width: 50px;
+  z-index: 3000;
+  transition: all 1s ease;
+  margin-right: 0px;
+  height: 100%;
+}
 .clickedIcon {
   flex: 1 !important;
 }
 
 #TitleName {
-  flex: 0;
+  flex: 1;
   overflow-x: auto;
   font-size: medium;
 }
@@ -66,6 +73,10 @@ a:visited {
   src: url("./fonts/Saiyan-Sans.ttf");
 }
 @font-face {
+  font-family: "proxima-nova";
+  src: url("./fonts/ProximaNova-Regular.otf");
+}
+@font-face {
   font-family: "number-font";
   src: url("./fonts/NoneShallPass-B598.ttf");
 }
@@ -87,6 +98,18 @@ a:visited {
 .tracklist-items {
   justify-content: center;
   align-content: center;
+  display: flex;
+  flex-direction: row;
+  font-family: proxima-nova;
+}
+.tracklistText {
+  width: 70%;
+  margin-right: 15px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+#playArrowTracklist {
+  margin: auto;
 }
 .tracklist-items:nth-child(even) {
   background-color: #0d47a1;
@@ -112,10 +135,11 @@ a:visited {
   border-radius: 20%;
 }
 .toolBar {
+  margin-bottom: 50px;
   display: flex;
   flex-direction: row;
-
-  justify-content: center;
+  position: fixed;
+  top: 0;
   min-width: 100%;
   box-sizing: content-box;
   padding: 0;
@@ -141,9 +165,7 @@ a:visited {
 #myAudio {
   width: 20px;
 }
-::-webkit-scrollbar {
-  width: 0px;
-}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -155,13 +177,14 @@ a:visited {
 .makeStyles-heroContent-2 {
   background-color: transparent !important;
 }
-.clockdiv {
+#clockdiv {
+  margin-top: 50px;
   display: flex;
   flex-direction: row;
-  width: 100%;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  margin-top: 100%;
+
   background-color: transparent;
 }
 #myVideo {
@@ -189,7 +212,8 @@ a:visited {
   text-shadow: 2px 2px #121858;
 }
 #subtitle {
-  margin-top: 0;
+  margin-top: 50px;
+  margin-bottom: 0px;
   font-family: graffiti;
   color: red;
   font-size: 7rem;
@@ -227,6 +251,7 @@ a:visited {
 .login1 {
   background-color: black;
   width: 100%;
+  min-width: 100%;
   height: 50%;
   display: inline-block;
   position: absolute;
@@ -234,6 +259,10 @@ a:visited {
   left: 0;
 }
 @media (min-width: 650px) {
+  .loginBody {
+    height: 650px;
+    max-height: 650px;
+  }
   .loginPage {
     display: inline-block;
     width: 100%;
@@ -271,17 +300,35 @@ a:visited {
 }
 #loadingIcon {
   margin-top: 0;
+  transition: all 3s ease;
 }
-#passwordInput {
-  width: 20%;
-  border: none;
-  margin: auto;
-  display: block;
+.loginInfos {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  min-width: 100%;
+  width: 100%;
+  height: 100%;
   position: absolute;
-  top: 80%;
-  right: 40%;
+  margin: auto;
   z-index: 3000;
 }
+#passwordInput {
+  width: 150px;
+  border: none;
+  margin: auto;
+  margin-right: 20px;
+}
+#loginIcon {
+  background-color: white;
+  width: 50px;
+  border: none;
+  margin: auto;
+  margin-left: 20px;
+  z-index: 3000;
+  justify-self: center;
+}
+
 @keyframes slidedown {
   from {
     transform: translateY(0%);
@@ -309,13 +356,40 @@ a:visited {
 .jss2 {
   background-color: transparent;
 }
+@keyframes slideup2 {
+  0% {
+    transform: translateY(700px);
+  }
 
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes slidedown2 {
+  0% {
+    transform: translateY(-300px);
+  }
+  50% {
+    transform: translateY(-300px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
 #loginYearOne {
+  animation: slidedown2 6s;
   font-family: number-font;
   color: black;
   font-size: 4rem;
   margin-bottom: 0px;
   margin-top: 10px;
+}
+#loginBody {
+  overflow: hidden;
+  min-height: 100%;
+  max-height: 100%;
+  min-width: 100%;
 }
 #loginTitleOne {
   margin-top: 1%;
@@ -324,8 +398,13 @@ a:visited {
   -webkit-text-stroke: 1px black;
   font-size: 4rem;
   margin-bottom: 5%;
+  animation: slideup2 4s;
+}
+.hidden {
+  display: none;
 }
 #loginYearTwo {
+  animation: slideup2 4s;
   margin-top: 0;
   font-family: number-font;
   font-size: 4rem;
@@ -374,4 +453,93 @@ a:visited {
   100% {
     opacity: 0;
   }
+}
+#albumHTML {
+  overflow-x: scroll;
+  box-sizing: content-box;
+  border-radius: 10%;
+  padding-top: 30px;
+  margin-bottom: 30px;
+}
+@media (hover: none) and (pointer: coarse) {
+  #albumHTML::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+  }
+}
+#albumHTML::-webkit-scrollbar {
+  margin-top: 10px;
+  width: 8px;
+  height: 10px;
+}
+
+#albumHTML::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background: linear-gradient(#121858, #121858);
+}
+
+#albumHTML::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  background-color: white;
+}
+.albumContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+.albumCard {
+  min-width: 150px;
+  background-color: #0d47a1;
+  color: white;
+  font-size: 0.5rem;
+  min-height: 220px;
+  padding: 24px;
+  box-shadow: -1.5rem 2rem 3rem black;
+  margin: 0;
+  border-radius: 15px;
+  transition: all 0.2s ease;
+  overflow-x: auto !important;
+  display: flex;
+  flex-direction: column;
+  border: 1px black solid;
+  font-family: proxima-nova;
+}
+.photoTracks {
+  max-height: 130px;
+  border: 2px solid black;
+}
+@media (max-width: 1200px) {
+  .albumCard {
+    min-width: 150px;
+    height: 150px;
+  }
+}
+.albumCard:hover {
+  transform: translateY(-8%);
+}
+.albumCard:not(:first-child):hover {
+  margin-left: -5px;
+}
+.albumCard:hover ~ .albumCard {
+  transform: translateX(0);
+}
+::-webkit-scrollbar {
+  width: 0px;
+}
+.playIconTracks {
+  margin: auto;
+  width: 30px;
+}
+.selectedIcon {
+  background-color: grey !important;
+}
+
+.trackIconList {
+  margin-bottom: 20px !important;
 }

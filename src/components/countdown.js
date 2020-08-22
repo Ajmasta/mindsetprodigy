@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import moment from "moment";
 import blue from "@material-ui/core/colors/blue";
 const AlbumCountdown = () => {
-  const mom = moment("20200802 00:00:00", "YYYYMMDD HH:mm:ss");
+  const mom = moment("20200829 14:00:00", "YYYYMMDD HH:mm:ss");
   mom.diff(moment(), "s");
 
   const deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
@@ -42,9 +42,9 @@ const AlbumCountdown = () => {
           clearInterval(timeinterval);
         }
       }
+      const timeinterval = setInterval(updateClock, 1000);
 
       updateClock();
-      const timeinterval = setInterval(updateClock, 1000);
     }
     initializeClock("clockdiv", deadline);
   }, [deadline, mom]);
