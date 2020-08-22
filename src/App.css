@@ -107,6 +107,7 @@ a:visited {
 .tracklistText {
   width: 70%;
 
+
   overflow-x: scroll;
   margin-right: 15px;
   margin-top:auto;
@@ -117,6 +118,7 @@ a:visited {
 }
 .playArrowTracklist {
   margin: auto;
+  height:24px;
 }
 .MuiTypography-displayBlock{
   min-width:256px;
