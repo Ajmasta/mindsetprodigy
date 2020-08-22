@@ -46,14 +46,14 @@ function renderRow({ index, style }) {
     "Chemin",
     "The Prodigy (skit)",
     "Hyped",
-    "Du Sale a L’Ancienne (feat Breeze)",
+    "Du Sale à L’Ancienne (feat Breeze)",
     "Vice City",
     "Hegobreak (part 1)",
     "LxF (part 2)",
     "Je Suis Jordy (skit)",
     "Bon Bagaye (feat Black Lion)",
     "Envol",
-    "Souriciere",
+    "Souricière",
     "Captain Ginyu's Squad",
     "Couronne de Roi (feat Jello)"
   ];
