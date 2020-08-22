@@ -40,7 +40,7 @@ const Login = () => {
     audio.play();
     audio.onended = () => setEnded(true);
   }
-  console.log(progress);
+  
 
   return (
     <body id="loginBody">

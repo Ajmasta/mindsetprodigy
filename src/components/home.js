@@ -42,7 +42,7 @@ function Copyright() {
 }
 function renderRow({ index, style }) {
   const array = [
-    "Le Retour",
+    "Jamais Parti",
     "Chemin",
     "The Prodigy (skit)",
     "Hyped",
@@ -223,7 +223,7 @@ export default function Album() {
                   height={200}
                   width={400}
                   
-                  border-radius={"10%"}
+
                   itemSize={46}
                   itemCount={14}
                   style={{
