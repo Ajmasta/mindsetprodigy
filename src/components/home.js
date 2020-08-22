@@ -58,9 +58,23 @@ function renderRow({ index, style }) {
     "Couronne de Roi (feat Jello)"
   ];
   return (
-    <ListItem class="tracklist-items" button style={style} key={index}>
+    <ListItem 
+    class="tracklist-items" button style={style} key={index}>
       <ListItemText class="tracklistText" primary={`${array[index]}`} />{" "}
-      <PlayArrowIcon id="playArrowTracklist" />
+
+      <div  className="playArrowTracklist" 
+            onMouseOver={()=>{ 
+      if (document.getElementById(`playButtonText${index}`)) document.getElementById(`playButtonText${index}`).classList.remove("hidden");
+     if (document.getElementById(`playIconTracks${index}`)) document.getElementById(`playIconTracks${index}`).classList.add("hidden")}} 
+    onMouseLeave={()=>{
+     if (document.getElementById(`playButtonText${index}`)) document.getElementById(`playButtonText${index}`).classList.add("hidden");
+     if (document.getElementById(`playIconTracks${index}`)) document.getElementById(`playIconTracks${index}`).classList.remove("hidden")}} 
+             >
+              <p className="hidden" id={`playButtonText${index}`}>29/08</p>
+              <PlayArrowIcon className="playArrowTracklist" id={`playIconTracks${index}`} />
+
+             </div>
+      
     </ListItem>
   );
 }

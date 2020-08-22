@@ -30,7 +30,7 @@ const AlbumGrid = () => {
     { id: image6, title: "Vice City", artist: "", length: 11200 },
     { id: image7, title: "Hegobreak (part 1)", artist: "", length: 11200 },
     { id: image8, title: "LxF (part 2)", artist: "", length: 11200 },
-    { id: image9, title: "Je Suis Jordy (skit)", artist: "", length: 11200 },
+    { id: image9, title: "Où est Jordy ? (skit)", artist: "", length: 11200 },
     { id: image10, title: "Bon Bagaye feat Black Lion", artist: "" , length: 11200 },
     { id:image11, title: "Envol", artist:"" , length: 11200 },
     { id: image12, title: "Souricière", artist:"" , length: 11200 },
@@ -43,11 +43,24 @@ const AlbumGrid = () => {
   return (
     <html id="albumHTML">
       <div className="albumContainer">
-        {tracks.map((track) => (
+        {
+          tracks.map((track,i) => (
           <article className="albumCard">
             <img src={track.id} className="photoTracks" alt="track cover" />
             <h1>{track.title}</h1> <h2> {track.artist}</h2>
-            <PlayArrowIcon className="playIconTracks" />
+            <div 
+             onMouseOver={()=>{ 
+               if (document.getElementById(`playButtonText${i}`)) document.getElementById(`playButtonText${i}`).classList.remove("hidden");
+              if (document.getElementById(`playIconTracks${i}`)) document.getElementById(`playIconTracks${i}`).classList.add("hidden")}} 
+             onMouseLeave={()=>{
+              if (document.getElementById(`playButtonText${i}`)) document.getElementById(`playButtonText${i}`).classList.add("hidden");
+              if (document.getElementById(`playIconTracks${i}`)) document.getElementById(`playIconTracks${i}`).classList.remove("hidden")}} 
+             >
+              <p className="hidden playButtonText" id={`playButtonText${i}`}>29/08</p>
+             <PlayArrowIcon className ="playIconTracks" id={`playIconTracks${i}`} />
+
+             </div>
+            
           </article>
         ))}
       </div>

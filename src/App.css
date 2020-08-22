@@ -115,7 +115,7 @@ a:visited {
  padding-left:20px;
 
 }
-#playArrowTracklist {
+.playArrowTracklist {
   margin: auto;
 }
 .MuiTypography-displayBlock{
@@ -419,7 +419,7 @@ a:visited {
   animation: slideup2 4s;
 }
 .hidden {
-  display: none;
+  display: none !important;
 }
 #loginYearTwo {
   animation: slideup2 4s;
@@ -556,7 +556,7 @@ a:visited {
 .playIconTracks {
   margin: auto;
   width: 30px;
-  color:grey;
+  
 
 }
 .selectedIcon {
@@ -565,4 +565,8 @@ a:visited {
 
 .trackIconList {
   margin-bottom: 20px !important;
+}
+
+.playButtonText{
+  font-size: 0.9rem;
 }
