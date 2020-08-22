@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/mindsetprodigy/precache-manifest.4c90dc2f22440f92ebcd51489220f761.js"
+  "/mindsetprodigy/precache-manifest.f31e6abb405c7eaba8a63c3528d4a5a3.js"
 );
 
 self.addEventListener('message', (event) => {
