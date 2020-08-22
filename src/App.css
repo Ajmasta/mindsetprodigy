@@ -96,23 +96,31 @@ a:visited {
   color: white;
 }
 .tracklist-items {
-  justify-content: center;
-  align-content: center;
+  justify-content: left;
+  align-content: left;
   display: flex;
   flex-direction: row;
   font-family: proxima-nova;
 }
 .tracklistText {
   width: 70%;
+  overflow-x: scroll;
   margin-right: 15px;
   margin-top: auto;
-  margin-bottom: auto;
+  
+ text-align:left;
+ padding-left:20px;
+
 }
 #playArrowTracklist {
   margin: auto;
 }
+.MuiTypography-displayBlock{
+  min-width:256px;
+  width:100%;
+}
 .tracklist-items:nth-child(even) {
-  background-color: #0d47a1;
+  background-color: rgb(48, 47, 47);
   transition: background-color 0.4s ease;
   border-bottom: #121858 1px solid;
   color: white;
@@ -133,6 +141,10 @@ a:visited {
 
 #tracklist {
   border-radius: 20%;
+  justify-items: center;
+  align-content: center;
+  justify-self: center;
+  
 }
 .toolBar {
   margin-bottom: 50px;
@@ -497,8 +509,9 @@ a:visited {
   min-width: 150px;
   background-color: #0d47a1;
   color: white;
-  font-size: 0.5rem;
-  min-height: 220px;
+  font-size: 0.67rem;
+  min-height: 200px;
+  max-height:250px;
   padding: 24px;
   box-shadow: -1.5rem 2rem 3rem black;
   margin: 0;
@@ -509,7 +522,9 @@ a:visited {
   flex-direction: column;
   border: 1px black solid;
   font-family: proxima-nova;
+
 }
+
 .photoTracks {
   max-height: 130px;
   border: 2px solid black;
@@ -535,6 +550,8 @@ a:visited {
 .playIconTracks {
   margin: auto;
   width: 30px;
+  color:grey;
+
 }
 .selectedIcon {
   background-color: grey !important;

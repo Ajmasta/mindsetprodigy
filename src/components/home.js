@@ -217,17 +217,19 @@ export default function Album() {
             {viewSelected === "album" ? (
               <AlbumGrid />
             ) : (
-              <div className={classes.root}>
+              <div>
                 <FixedSizeList
                   id="tracklist"
                   height={200}
-                  width={300}
+                  width={400}
+                  
                   border-radius={"10%"}
                   itemSize={46}
                   itemCount={14}
                   style={{
                     backgroundColor: "transparent",
-                    margin: "0",
+                    marginLeft: "auto",
+                    marginRight:"auto",
                     marginBottom: "135px",
                     marginTop: "35px",
                     border: "3px #121858  solid",
